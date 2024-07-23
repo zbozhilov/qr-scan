@@ -1,4 +1,4 @@
-Basic QR Scan react component
+Basic QR Scan react component uses html5-qrcode lib
 
 ```javascript
 
