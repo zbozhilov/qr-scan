@@ -8,10 +8,10 @@ Basic QR Scan react component uses html5-qrcode lib
           
             <QrScan
                 showFocusBox={true}
+                focusBoxOutline={80}
                 icon={true}
                 size={350}
-                focusBoxOutline={80}
-                verbose={true}
+       
                 onSuccess={(decodedString) => {
                  
                 }}
