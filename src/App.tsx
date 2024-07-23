@@ -1,26 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import QrScan from './qr-scan/QrScan';
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className='App'>
+            <QrScan
+                showFocusBox={true}
+                icon={true}
+                size={350}
+                focusBoxOutline={80}
+                verbose={true}
+                onSuccess={(decodedString) => {
+                    console.log(decodedString);
+                }}
+                onError={({ message, name }) => {
+                    console.log(name);
+                }}
+            />
+        </div>
+    );
 }
 
 export default App;
